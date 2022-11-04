@@ -10,9 +10,9 @@ class Derterministric
 	string InputString;
 	int Initial_State = 0;
 	int Current_State = 0;
-	
 
-	public:
+
+public:
 	Derterministric(string InputString)
 	{
 		this->InputString = InputString;
@@ -22,7 +22,7 @@ class Derterministric
 	{
 		if (State == 0)
 		{
-			if (Inputstring1 =='0')
+			if (Inputstring1 == '0')
 			{
 				State = 1;
 			}
@@ -50,7 +50,7 @@ class Derterministric
 				cout << "Invalid String" << endl;
 			}
 		}
-		else if(State==2)
+		else if (State == 2)
 		{
 			if (Inputstring1 == '0')
 			{
@@ -81,7 +81,7 @@ class Derterministric
 		else {
 			cout << "String Is not Language";
 		}
-		
+
 
 		return State;
 	}
@@ -90,12 +90,12 @@ class Derterministric
 	{
 		for (int i = 0; i < InputString.length(); i++)
 		{
-			char inputchar= char(InputString[i]);
-			
+			char inputchar = char(InputString[i]);
+
 			Current_State = TransitionDFA(inputchar, Current_State);
 		}
 
-		if (Current_State ==0)
+		if (Current_State == 0)
 		{
 			cout << "True";
 		}
